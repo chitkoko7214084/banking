@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>In Class Activity</title>
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  
+    
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" >
+</script>
+
+<link rel="stylesheet" type="text/css" href="invest.css"/>
+
+<script>
+    $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+
+</head>
+<body>
+  <div class="container"><!-- Start container -->
+
+    <form>
+      <div class="form-group row"><!-- Start image -->
+        <img src="banking.jpg" class="img-rounded col-sm-offset-3 col-sm-9" alt="Banking Image">
+      </div><!-- Ending image -->
+
+      <div class="form-group row"><!-- Start investment -->
+        <label class="label-control col-sm-3" for="investmentInput">Investment</label>
+        <div class="col-sm-9"><!-- Start Investment column -->
+          <div class="input-group"><!-- Start input group -->
+            <span class="input-group-addon">$</span>
+            <input type="number" class="form-control" id="investmentInput" step="any" 
+                   placeholder="Enter the amount for investment:" data-toggle="tooltip" title="Enter Investment" data-placement="bottom" required>
+          </div><!-- Ending input group -->
+        </div><!-- Ending investment column -->
+      </div><!-- Ending investment -->
+
+      <div class="form-group row"><!-- Interest Rate -->
+        <label class="label-control col-sm-3" for="interestRate">Interest Rate</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="number" step="any" id="interestRate" placeholder="Enter interest rate:" data-toggle="tooltip" title="Enter Interest Rate"
+                 data-placement="bottom" required>
+        </div><!-- Ending interest rate column -->
+      </div><!-- Ending Interest Rate -->
+
+      <div class="form-group row"><!-- Number of Years -->
+        <label class="label-control col-sm-3" for="years">Number of Years</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="number" step="1" id="years" placeholder="Enter years" data-toggle="tooltip" title="Enter Years" data-placement="bottom"
+                 required>
+        </div><!-- Ending years column -->
+      </div><!-- Ending years -->
+
+      <div class="form-group row"><!-- Final Values -->
+        <label class="label-control col-sm-3" for="finalValues">Final values</label>
+        <div class="col-sm-9">
+          <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input class="form-control" type="number" step="any" id="finalValues" readonly>
+          </div><!-- Ending dollar sign group -->
+        </div><!-- Ending final values result -->
+      </div><!-- Ending final values -->
+
+      <div class="form-group row"><!-- Button groups -->
+        <div class="col-sm-offset-3 col-sm-4 col-xs-6">
+          <!-- Add your button or content here -->
+          <input type="submit" class="btn btn-success" value="compute" id="btn-Compute"
+          onclick="return calculate()">
+          &nbsp;&nbsp;&nbsp;&nbsp;
+
+          <input type="reset" class="btn btn-danger" value="clear">
+        </div><!-- Ending button -->
+      </div><!-- Ending button groups -->
+    </form>
+
+  </div><!-- Ending container -->
+  <script src="invest.js"></script>
+</body>
+</html>
